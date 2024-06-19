@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rubik';
+        background-color: #f1f1f1;
+      }
+      .mobile {
+        width: 365px;
+        padding: 15px;
+        border: 20px solid white;
+        background-color:#F5F3F8;
+        position: relative;
+        border-radius: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .mobile-header {
+        display: flex;
+        width: 375px;
+        margin-left: -15px;
+        padding: 9px;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          hsl(264, 100%, 61%),
+          hsl(293, 100%, 63%)
+        );
+        border-radius: 20px;
+        margin-top: -20px;
+        position: relative;
+      }
+      .avatar-img {
+        width: 30px;
+        margin-left: 30px;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
+      .chat-1,
+      .chat-2,
+      .chat-6 {
+        background-color:#EDE5F4;
+        margin-right: 120px;
+        border-radius:  20px 20px 20px 0;
+        box-shadow: 3px 4px 3px #d0cbd4;
+      }
+      .chat-3 {
+        margin-left: 200px;
+      }
+      .chat-1-about,
+      .chat-2-about,
+      .chat-6-about {
+        color: hsl(276, 55%, 52%);
+        padding: 4px;
+      }
+      .p-1 {
+        margin-left: 10px;
+        color: white;
+        margin-bottom: -10px;
+      }
+      .p-2 {
+        margin-left: 10px;
+        padding-top: -30px;
+        font-size: 13px;
+        color: rgb(224, 224, 224);
+      }
+      .dog-img {
+        width: 50px;
+        margin-left: 1px;
+        border-radius: 13px;
+      }
+      .chat-4,
+      .chat-5 {
+        background-color: #fff;
+        margin-left: 100px;
+        border-radius:  20px 20px 0 20px;
+        box-shadow: 3px 4px 3px #d0cbd4;
+        margin-top: 6px;
+      }
+      .chat-4-about,
+      .chat-5-about {
+        padding: 6px;
+      }
+      .chat-7, .chat-8 {
+        box-shadow: 3px 4px 3px #d0cbd4;
+        background: linear-gradient(
+          135deg,
+          hsl(293, 100%, 63%),
+          hsl(264, 100%, 61%)
+          );
+          margin-right: 120px;
+          border-radius:  20px 20px 20px 0;
+          align-items: center;;
+          display: flex;
+          margin-top: 6px;
+        }
+        .chat-7-about, .chat-8-about {
+        color: white;
+        padding: 7px;
+      }
+      .mobile-header::before {
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        width: 167px;
+        padding: 2.5px;
+        top: -8px;
+        margin-left: 120px;
+        height: 20px;
+        border-radius: 10px;
+      }
+      .circle {
+        border: 1px solid white;
+        margin-right: 20px;
+        color: transparent;
+        width: 17px;
+        border-radius: 50%;
+      }
+      .input {
+        display: flex;
+        align-items: center;
+      }
+    .stay {
+      color: rgb(116, 113, 113);
+    }
+    .simple  {
+      color: rgb(46, 46, 46);
+    }
+      .container {
+        display: flex;
+        padding: 2rem;
+        margin: 0 230px;
+        align-items: center;
+      }
+      .search {
+        box-shadow: 3px 4px 3px #d0cbd4;
+        width: 90%;
+        margin-top: 10px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 15px;
+      }
+      .mobile::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 600px;
+        left: -340px;
+        top: -120px;
+        border-radius: 0 0 600px 600px;
+        z-index: -1;
+        padding: 50px;
+        background: linear-gradient(
+          135deg,
+          hsl(293, 100%, 63%),
+          hsl(264, 100%, 61%)
+          );
+      }
+      .bold {
+        color: white;
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      .arow-1 {
+        cursor: pointer;
+        font-size: 25px;
+        color: white;
+      }
+      .white {
+        font-size: 12px;
+        color: white;
+      }
+      .arow-2 {
+        margin-left: -45px;
+        margin-top: 10px;
+        font-size: 20px;
+        background-color: #3C2553;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      .three-dots {
+        margin-left: 100px;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+      }
+      .col-2 {
+        margin-left: 50px;
+      }
+      @media (max-width:1290px) {
+        .mobile {
+          width: 365px;
+          margin: 20px 20px;
+        }
+        .container  {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          margin: 20px;
+        }
+        .mobile-header {
+          width: 100%;
+        }
+        .col-2 {
+          margin-left: 0px;
+        }
+      }
+          </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mob">
+        <div class="mobile">
+          <div class="mobile-header">
+            <ion-icon class="arow-1" name="chevron-back-outline"></ion-icon>
+            <img class="avatar-img" src="./images/avatar.jpg" alt="" />
+            <div class="about-avatar">
+              <p class="p-1">Samuel Green</p>
+              <p class="p-2">Available to Walk</p>
+            </div>
+            <ion-icon class="three-dots" name="reorder-three-outline"></ion-icon>
+          </div>
+          <div class="chat-1">
+            <p class="chat-1-about">That sounds great. I’d be happy with that.</p>
+          </div>
+          <div class="chat-2">
+            <p class="chat-2-about">
+              Could you send over some pictures of your dog, please?
+            </p>
+          </div>
+          <div class="chat-3">
+            <img class="dog-img" src="./images/dog-image-1.jpg" alt="" />
+            <img class="dog-img" src="./images/dog-image-2.jpg" alt="" />
+            <img class="dog-img" src="./images/dog-image-3.jpg" alt="" />
+          </div>
+          <div class="chat-4">
+            <p class="chat-4-about">
+              Here are a few pictures. She’s a happy girl!
+            </p>
+          </div>
+          <div class="chat-5">
+            <p class="chat-5-about">Can you make it?</p>
+          </div>
+          <div class="chat-6">
+            <p class="chat-6-about">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+          </div>
+          <div class="chat-7">
+            <p class="chat-7-about"> <div class="circle">c</div><span class="white">30 minute walk</span><span class="bold"> $29</span></p>
+          </div>
+          <div class="chat-8">
+            <p class="chat-8-about"> <div class="circle">c</div> <span class="white">1 hour walk</span><span class="bold"> $49</span></p>
+          </div>
+          <div class="input">
+            <input type="text" class="search" placeholder="Type a message…">
+            <div class="icon">
+              <ion-icon class="arow-2" name="chevron-forward-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <h1 class="simple">Simple booking</h1>
+        <p class="stay">Stay intouch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you
+          can rate your walker and book again all through the chat.</p>
+      </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
